@@ -8,6 +8,8 @@ data "aws_ami" "amazon_linux" {
   }
 }
 
+#added comment
+
 variable "http_ssh" {
   type        = list(number)
   description = "allow http traffic"
