@@ -12,8 +12,6 @@ resource "aws_instance" "my_server" {
   ami           = data.aws_ami.amazon_linux.id
   instance_type = "t3.micro"
 
-  count = 3
-
   provisioner "local-exec" {
     command = "/usr/bin/echo ${self.public_ip} >> server_ip.txt"
   }
